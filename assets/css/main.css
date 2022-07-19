@@ -1,0 +1,26 @@
+/* Site Colors*/
+@import './normalize.css';
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  font-size: 15px;
+}
+
+.font-alata {
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+.font-josefin-sans {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}

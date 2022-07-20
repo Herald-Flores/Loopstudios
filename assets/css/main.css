@@ -15,6 +15,10 @@ body {
   font-size: 15px;
   position: relative;
 }
+body.not-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
 
 .font-alata {
   font-family: 'Alata', sans-serif;
@@ -170,7 +174,7 @@ body {
 .card-hero-overlay .card-img {
   min-height: 100%;
   object-fit: cover;
-  object-position: -535px top;
+  object-position: -300px top;
 }
 
 .card-hero-overlay .card-img-overlay {
@@ -202,3 +206,42 @@ body {
 .card-hero-overlay .content-hero h1 {
   margin: 0;
 }
+
+/* Media Query Tablet */
+@media (min-width: 768px) {
+  .card-hero-overlay .card-img-overlay {
+    justify-content: left;
+    padding-left: 60px;
+  }
+  .card-hero-overlay .card-img {
+    object-position: -400px center;
+  }
+  .card-hero-overlay .content-hero {
+    max-width: 460px;
+    padding: 30px 45px;
+  }
+  .card-hero-overlay .content-hero h1 {
+    font-size: 3.2rem;
+  }
+}
+/* Media Query Desktop */
+
+/* Media Query Tablet */
+@media (min-width: 1200px) {
+  .card-hero-overlay .card-img-overlay {
+    justify-content: left;
+    padding-left: 150px;
+  }
+  .card-hero-overlay .card-img {
+    min-width: 100%;
+    object-position: center;
+  }
+  .card-hero-overlay .content-hero {
+    max-width: 670px;
+    padding: 30px 45px;
+  }
+  .card-hero-overlay .content-hero h1 {
+    font-size: 4.5rem;
+  }
+}
+/* Media Query Desktop */

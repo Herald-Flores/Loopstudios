@@ -1,5 +1,8 @@
 /* Site Colors*/
 @import './normalize.css';
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 :root {
   --white: hsl(0, 0%, 100%);
@@ -7,10 +10,6 @@
   --dark-gray: hsl(0, 0%, 55%);
   --very-dark-gray: hsl(0, 0%, 41%);
 }
-
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 body {
   font-size: 15px;
@@ -23,4 +22,49 @@ body {
 .font-josefin-sans {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
+}
+
+/* Hero */
+.card-hero-overlay {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.card-hero-overlay .card-img {
+  min-height: 100%;
+  object-fit: cover;
+  object-position: -535px top;
+}
+
+.card-hero-overlay .card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-hero-overlay .content-hero {
+  box-sizing: border-box;
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  line-height: 1.15;
+  max-width: 350px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.card-hero-overlay .content-hero h1 {
+  margin: 0;
 }

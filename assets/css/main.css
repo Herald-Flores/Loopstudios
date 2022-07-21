@@ -19,6 +19,11 @@ body.not-scroll {
   overflow: hidden;
   max-height: 100vh;
 }
+.container {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+}
 
 .font-alata {
   font-family: 'Alata', sans-serif;
@@ -30,25 +35,37 @@ body.not-scroll {
 }
 
 /* Navigation bar */
-.navigation-bar {
+.main-header {
   background-color: transparent;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.main-header.scrolled {
+  background-color: var(--black);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 1s all;
+  padding-top: 8px;
+}
+
+.navigation-bar {
   height: 60px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
   z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
-  position: fixed;
 }
 .navigation-bar .container {
   padding-top: 10px;
-  display: flex;
+  justify-content: space-between;
 }
 .navigation-bar .navbar-brand {
   display: flex;
@@ -170,6 +187,9 @@ body.not-scroll {
   min-height: 90vh;
   overflow: hidden;
 }
+.card-hero-overlay .container {
+  justify-content: center;
+}
 
 .card-hero-overlay .card-img {
   min-height: 100%;
@@ -206,6 +226,49 @@ body.not-scroll {
 .card-hero-overlay .content-hero h1 {
   margin: 0;
 }
+/* End Hero*/
+
+/* Who we are */
+#who-we-are {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 3rem 15px;
+}
+#who-we-are .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding-top: 3rem;
+}
+#who-we-are .row .column {
+  flex: 1 1 50%;
+  padding: 0 15px;
+}
+#who-we-are .picture-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#who-we-are .picture-image img {
+  width: 100%;
+}
+
+#who-we-are .content-text-description {
+  color: var(--black);
+  text-align: center;
+}
+#who-we-are .content-text-description h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+#who-we-are .content-text-description p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--dark-gray);
+  margin: 0;
+}
+/* End Who we are */
 
 /* Media Query Tablet */
 @media (min-width: 768px) {
@@ -223,14 +286,59 @@ body.not-scroll {
   .card-hero-overlay .content-hero h1 {
     font-size: 3.2rem;
   }
-}
-/* Media Query Desktop */
 
-/* Media Query Tablet */
+  .card-hero-overlay .container {
+    justify-content: flex-start;
+  }
+}
+/* End Media Query Tablet */
+
+/* Media Query Desktop */
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* Navigation Bar Desktop */
+  .main-header {
+    padding-top: 40px;
+  }
+  .navigation-bar .container {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .navigation-bar .navbar-brand {
+    display: block;
+    width: 240px;
+  }
+  .navigation-bar .navbar-brand img {
+    width: 100%;
+  }
+  .navigation-bar .navbar-toggler {
+    display: none;
+  }
+  .navigation-bar .navbar-collapse {
+    background-color: transparent;
+    display: flex !important;
+    flex-basis: auto;
+    max-width: 80%;
+  }
+  .navigation-bar .navbar-nav {
+    font-size: 1.2rem;
+    font-family: 'Alata', sans-serif;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    letter-spacing: 1.2px;
+    padding-left: 15px;
+    text-transform: capitalize;
+    width: 100%;
+  }
+  /* Navigation Bar Desktop */
+
   .card-hero-overlay .card-img-overlay {
     justify-content: left;
-    padding-left: 150px;
+    padding-left: 0;
   }
   .card-hero-overlay .card-img {
     min-width: 100%;
@@ -243,5 +351,44 @@ body.not-scroll {
   .card-hero-overlay .content-hero h1 {
     font-size: 4.5rem;
   }
+
+  /* Who We Are */
+  #who-we-are .row {
+    gap: 20px;
+    padding-top: 3rem;
+  }
+  #who-we-are .row .column:first-of-type {
+    max-width: 65%;
+  }
+  #who-we-are .row .column:nth-of-type(2) {
+    display: flex;
+    align-items: flex-end;
+    max-width: 35%;
+  }
+  #who-we-are .content-text-description {
+    background-color: var(--white);
+    margin-left: -50%;
+    margin-bottom: -8%;
+    padding: 2rem 5px 2rem 5rem;
+    text-align: left;
+    max-width: 630px;
+  }
+  #who-we-are .content-text-description h2 {
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+  #who-we-are .content-text-description p {
+    font-size: 1.1rem;
+  }
 }
-/* Media Query Desktop */
+/* End Media Query Desktop */
+
+/* Media Query Desktop > 1440px */
+@media (min-width: 1440px) {
+  /* Navigation Bar Desktop > 1440px */
+  .container {
+    max-width: 1440px;
+  }
+  /* Navigation Bar Desktop */
+}
+/* End Media Query Desktop */

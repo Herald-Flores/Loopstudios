@@ -1,0 +1,15 @@
+/* Hero */
+.card-hero-overlay {
+  min-height: 40vh;
+  max-height: 60vh;
+}
+
+@media (min-width: 1200px) {
+  #who-we-are .row {
+    flex-direction: row-reverse;
+  }
+  #who-we-are .content-text-description {
+    margin-right: -50%;
+    margin-left: 0;
+  }
+}

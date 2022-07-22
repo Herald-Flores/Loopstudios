@@ -186,6 +186,19 @@ body.not-scroll {
 .navigation-bar .navbar-nav a {
   color: var(--white);
   text-decoration: none;
+  position: relative;
+}
+.navigation-bar .navbar-nav a.active::before {
+  content: '';
+  border-radius: 1px;
+  position: absolute;
+  width: 80%;
+  margin-left: 10%;
+  height: 2px;
+  background-color: var(--white);
+  bottom: -3px;
+  left: 0;
+  transition: background-color 0.2s ease-in-out;
 }
 
 /* Hero */
@@ -287,6 +300,9 @@ body.not-scroll {
 }
 #post-list .column {
   width: 100%;
+}
+#post-list .subtitle-h2 {
+  text-align: center;
 }
 
 #post-list .card-group {
@@ -564,6 +580,9 @@ body.not-scroll {
   .card-post-overlay {
     max-height: 430px;
     width: 23.5%;
+  }
+  #post-list .subtitle-h2 {
+    text-align: left;
   }
 
   /* Footer */

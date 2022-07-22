@@ -1,7 +1,38 @@
 /* Hero */
+.mb-5 {
+  margin-bottom: 5rem;
+}
 .card-hero-overlay {
   min-height: 40vh;
   max-height: 60vh;
+}
+#about-us {
+  padding-top: 4rem;
+}
+#about-us .column {
+  padding: 0 15px;
+}
+#about-us .row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 15px;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+#about-us h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0;
+  text-transform: uppercase;
+}
+#about-us p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--very-dark-gray);
 }
 
 @media (min-width: 1200px) {
@@ -11,5 +42,9 @@
   #who-we-are .content-text-description {
     margin-right: -50%;
     margin-left: 0;
+  }
+
+  #about-us .column {
+    width: 46%;
   }
 }

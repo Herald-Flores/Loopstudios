@@ -7,6 +7,7 @@ navToggler.addEventListener('click', () => {
   document.querySelector('.navbar-collapse').classList.toggle('show')
 })
 
+// Scroll
 window.addEventListener('scroll', () => {
   const scrollFromTop = window.pageYOffset
   const header = document.querySelector('.main-header')

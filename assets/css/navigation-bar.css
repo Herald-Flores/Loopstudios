@@ -1,0 +1,200 @@
+/* Navigation bar */
+.main-header {
+  background-color: transparent;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.main-header.scrolled {
+  background-color: var(--black);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 1s all;
+  padding-top: 8px;
+}
+
+.navigation-bar {
+  height: 60px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+.navigation-bar .container {
+  padding-top: 10px;
+  justify-content: space-between;
+}
+.navigation-bar .navbar-brand {
+  display: flex;
+  z-index: 4;
+}
+
+.navigation-bar .navbar-toggler:hover,
+.navigation-bar .navbar-toggler:focus {
+  outline: none;
+}
+.navigation-bar .navbar-toggler {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 1rem;
+  z-index: 5;
+  pointer-events: visible;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  outline: none;
+  margin-right: 8px;
+}
+.navigation-bar .navbar-toggler span {
+  content: '';
+  background-color: var(--white);
+  border-radius: 1px;
+  display: block;
+  position: absolute;
+  height: 3px;
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+    transform 0.2s linear;
+  width: 34px;
+  right: 2px;
+}
+.navigation-bar .navbar-toggler span:before,
+.navigation-bar .navbar-toggler span:after {
+  background-color: var(--white);
+  border-radius: 1px;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+    transform 0.2s linear;
+  width: 34px;
+}
+.navigation-bar .navbar-toggler span:before {
+  top: 8px;
+}
+.navigation-bar .navbar-toggler span:after {
+  top: -8px;
+}
+
+.navigation-bar .navbar-toggler.active span {
+  background-color: transparent;
+}
+.navigation-bar .navbar-toggler.active span:before,
+.navigation-bar .navbar-toggler.active span:after {
+  transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+.navigation-bar .navbar-toggler.active span:before {
+  top: 0;
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+.navigation-bar .navbar-toggler.active span:after {
+  top: 0;
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.navigation-bar .navbar-collapse {
+  background-color: var(--black);
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  z-index: 1;
+}
+.navigation-bar .navbar-collapse.show {
+  height: 100vh;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+    transform 0.2s linear;
+}
+.navigation-bar .collapse:not(.show) {
+  display: none;
+}
+.navigation-bar .navbar-nav {
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+.navigation-bar .navbar-nav li {
+  margin-bottom: 30px;
+}
+.navigation-bar .navbar-nav a {
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}
+nav ul.navbar-nav a:hover::before,
+nav ul.navbar-nav a:focus::before,
+nav ul.navbar-nav a.active::before {
+  content: '';
+  border-radius: 1px;
+  position: absolute;
+  width: 46%;
+  margin-left: 28%;
+  height: 2px;
+  background-color: var(--white);
+  bottom: -13px;
+  left: 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Media Query Desktop */
+@media (min-width: 1200px) {
+  .main-header {
+    padding-top: 60px;
+  }
+  .navigation-bar .container {
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .navigation-bar .navbar-brand {
+    display: block;
+    margin-top: -3px;
+    width: 192px;
+  }
+  .navigation-bar .navbar-brand img {
+    width: 100%;
+  }
+  .navigation-bar .navbar-toggler {
+    display: none;
+  }
+  .navigation-bar .navbar-collapse {
+    background-color: transparent;
+    display: flex !important;
+    flex-basis: auto;
+    max-width: 80%;
+  }
+  .navigation-bar .navbar-nav {
+    font-size: 0.93rem;
+    font-family: 'Alata', sans-serif;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 34px;
+    letter-spacing: 1.13;
+    padding-top: 4px;
+    padding-left: 0;
+    text-transform: capitalize;
+    width: 100%;
+  }
+}
+/* End Media Query Desktop */

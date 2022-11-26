@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loopstudios - Herald</title>
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+
     <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/icons/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/icons/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/navigation-bar.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
   </head>
   <body>
     <!-- Navigation Menu -->
@@ -32,7 +42,7 @@
                 <a class="nav-link" href="#">Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#post-list">Product</a>
+                <a class="nav-link" href="#post-list">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Support</a>
@@ -50,12 +60,12 @@
       <section class="card-hero-overlay">
         <img
           srcset="
-            assets/img/image-hero-mobile.jpg 480w,
-            assets/img/image-hero.jpg        768w
+            ./assets/img/image-hero-mobile.jpg 480w,
+            ./assets/img/image-hero.jpg        768w
           "
           sizes="(max-width: 600px) 480px,
               768px"
-          src="assets/img/image-hero.jpg"
+          src="./assets/img/image-hero.jpg"
           class="card-img"
           alt="card-img-overlay"
         />
@@ -104,8 +114,12 @@
       <!-- Posts -->
       <section id="post-list">
         <div class="container">
-          <div class="column">
+          <div class="column title-section">
             <h2 class="subtitle-h2 font-josefin-sans">Our Creations</h2>
+
+            <div class="btn-container">
+              <a href="#" class="btn-all">See All</a>
+            </div>
           </div>
 
           <div class="column">
@@ -267,7 +281,7 @@
           <img class="img-logo" src="./assets/img/logo.svg" alt="image-logo" />
 
           <nav class="navigation-footer">
-            <ul>
+            <ul class="navbar-nav">
               <li>
                 <a href="#">About</a>
               </li>
@@ -278,7 +292,7 @@
                 <a href="#">Events</a>
               </li>
               <li>
-                <a href="#">Product</a>
+                <a href="#">Products</a>
               </li>
               <li>
                 <a href="#">Support</a>
@@ -307,8 +321,17 @@
           <p class="font-alata">&copy; 2022 Loopstudios. All rights reserved</p>
         </div>
       </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Herald-Flores">Herald Flores</a>.
+      </div>
     </footer>
     <!-- End Footer -->
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

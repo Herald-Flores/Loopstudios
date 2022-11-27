@@ -21,8 +21,8 @@
   </head>
   <body>
     <!-- Navigation Menu -->
-    <header class="main-header">
-      <nav class="navigation-bar">
+    <header class="main-header" id="header-top-bar">
+      <nav id="header-navigation" class="navigation-bar">
         <div class="container">
           <a
             class="navbar-brand"
@@ -31,7 +31,11 @@
           >
             <img src="assets/img/logo.svg" alt="logo" />
           </a>
-          <button class="navbar-toggler" type="button">
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="hamburger button"
+          >
             <span></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -40,16 +44,22 @@
                 <a class="nav-link" href="./about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Carrers</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Carrers</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Events</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Events</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#post-list">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Support</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Support</a
+                >
               </li>
             </ul>
           </div>
@@ -61,7 +71,7 @@
     <!-- Main Content -->
     <main>
       <!-- Hero -->
-      <section class="card-hero-overlay">
+      <section id="hero-section" class="card-hero-overlay">
         <img
           srcset="
             ./assets/img/image-hero-mobile.jpg 480w,
@@ -284,7 +294,7 @@
         <div class="column">
           <img class="img-logo" src="./assets/img/logo.svg" alt="image-logo" />
 
-          <nav class="navigation-footer">
+          <nav id="footer-navigation" class="navigation-footer">
             <ul class="navbar-nav">
               <li>
                 <a href="#">About</a>
@@ -305,19 +315,30 @@
           </nav>
         </div>
         <div class="column">
-          <nav class="social-icons">
+          <nav id="social-navigation" class="social-icons">
             <ul>
               <li>
-                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"
+                  ><i
+                    class="fa-brands fa-facebook-square"
+                    aria-hidden="true"
+                  ></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"
+                  ><i class="fa-brands fa-twitter" aria-hidden="true"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"
+                  ><i class="fa-brands fa-pinterest" aria-hidden="true"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"
+                  ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                ></a>
               </li>
             </ul>
           </nav>
@@ -328,10 +349,18 @@
 
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          aria-label="Frontend Mentor challenge page"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://github.com/Herald-Flores">Herald Flores</a>.
+        <a
+          href="https://github.com/Herald-Flores"
+          aria-label="Herald Flores Github profile"
+          target="_blank"
+          >Herald Flores</a
+        >.
       </div>
     </footer>
     <!-- End Footer -->

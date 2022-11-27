@@ -15,8 +15,8 @@
   </head>
   <body>
     <!-- Navigation Menu -->
-    <header class="main-header">
-      <nav class="navigation-bar">
+    <header class="main-header" id="header-top-bar">
+      <nav id="header-navigation" class="navigation-bar">
         <div class="container">
           <a
             class="navbar-brand"
@@ -24,7 +24,11 @@
           >
             <img src="assets/img/logo.svg" alt="logo" />
           </a>
-          <button class="navbar-toggler" type="button">
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="hamburger button"
+          >
             <span></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -33,16 +37,24 @@
                 <a class="nav-link active" aria-current="page">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Carrers</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Carrers</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Events</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Events</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#post-list">Product</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Product</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Support</a>
+                <a class="nav-link" href="#" aria-lable="nav item example link"
+                  >Support</a
+                >
               </li>
             </ul>
           </div>
@@ -74,7 +86,7 @@
       <!-- About -->
       <section id="about-us">
         <div class="container">
-          <h2 class="subtitle font-josefin-sans">About US</h2>
+          <h1 class="title font-josefin-sans">About US</h1>
           <div class="row">
             <div class="column">
               <p class="font-alata m-0">

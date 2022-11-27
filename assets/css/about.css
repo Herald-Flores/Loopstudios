@@ -34,7 +34,12 @@
   font-weight: 300;
   color: var(--very-dark-gray);
 }
-
+.title {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+}
 @media (min-width: 1200px) {
   #who-we-are .row {
     flex-direction: row-reverse;

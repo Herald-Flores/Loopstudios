@@ -16,7 +16,7 @@
   padding-top: 8px;
 }
 
-.navigation-bar {
+.navbar-header {
   height: 60px;
   width: 100%;
   max-width: 100%;
@@ -27,20 +27,20 @@
   align-items: center;
   padding: 5px 20px;
 }
-.navigation-bar .container {
+.navbar-header .container {
   padding-top: 10px;
   justify-content: space-between;
 }
-.navigation-bar .navbar-brand {
+.navbar-header .navbar-brand {
   display: flex;
   z-index: 4;
 }
 
-.navigation-bar .navbar-toggler:hover,
-.navigation-bar .navbar-toggler:focus {
+.navbar-header .navbar-toggler:hover,
+.navbar-header .navbar-toggler:focus {
   outline: none;
 }
-.navigation-bar .navbar-toggler {
+.navbar-header .navbar-toggler {
   border: none;
   background-color: transparent;
   position: absolute;
@@ -53,7 +53,7 @@
   outline: none;
   margin-right: 8px;
 }
-.navigation-bar .navbar-toggler span {
+.navbar-header .navbar-toggler span {
   content: '';
   background-color: var(--white);
   border-radius: 1px;
@@ -66,8 +66,8 @@
   width: 34px;
   right: 2px;
 }
-.navigation-bar .navbar-toggler span:before,
-.navigation-bar .navbar-toggler span:after {
+.navbar-header .navbar-toggler span:before,
+.navbar-header .navbar-toggler span:after {
   background-color: var(--white);
   border-radius: 1px;
   content: '';
@@ -79,37 +79,37 @@
     transform 0.2s linear;
   width: 34px;
 }
-.navigation-bar .navbar-toggler span:before {
+.navbar-header .navbar-toggler span:before {
   top: 8px;
 }
-.navigation-bar .navbar-toggler span:after {
+.navbar-header .navbar-toggler span:after {
   top: -8px;
 }
 
-.navigation-bar .navbar-toggler.active span {
+.navbar-header .navbar-toggler.active span {
   background-color: transparent;
 }
-.navigation-bar .navbar-toggler.active span:before,
-.navigation-bar .navbar-toggler.active span:after {
+.navbar-header .navbar-toggler.active span:before,
+.navbar-header .navbar-toggler.active span:after {
   transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
 }
-.navigation-bar .navbar-toggler.active span:before {
+.navbar-header .navbar-toggler.active span:before {
   top: 0;
   transform: rotate3d(0, 0, 1, -45deg);
 }
-.navigation-bar .navbar-toggler.active span:after {
+.navbar-header .navbar-toggler.active span:after {
   top: 0;
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.navigation-bar .navbar-collapse {
+.navbar-header .navbar-collapse {
   background-color: var(--black);
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
   z-index: 1;
 }
-.navigation-bar .navbar-collapse.show {
+.navbar-header .navbar-collapse.show {
   height: 100vh;
   min-width: 100%;
   position: absolute;
@@ -121,10 +121,10 @@
   transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
     transform 0.2s linear;
 }
-.navigation-bar .collapse:not(.show) {
+.navbar-header .collapse:not(.show) {
   display: none;
 }
-.navigation-bar .navbar-nav {
+.navbar-header .navbar-nav {
   text-transform: uppercase;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
@@ -135,10 +135,10 @@
   padding-left: 15px;
   list-style: none;
 }
-.navigation-bar .navbar-nav li {
+.navbar-header .navbar-nav li {
   margin-bottom: 30px;
 }
-.navigation-bar .navbar-nav a {
+.navbar-header .navbar-nav a {
   color: var(--white);
   text-decoration: none;
   position: relative;
@@ -163,28 +163,28 @@ nav ul.navbar-nav a.active::before {
   .main-header {
     padding-top: 60px;
   }
-  .navigation-bar .container {
+  .navbar-header .container {
     justify-content: space-between;
     gap: 20px;
   }
-  .navigation-bar .navbar-brand {
+  .navbar-header .navbar-brand {
     display: block;
     margin-top: -3px;
     width: 192px;
   }
-  .navigation-bar .navbar-brand img {
+  .navbar-header .navbar-brand img {
     width: 100%;
   }
-  .navigation-bar .navbar-toggler {
+  .navbar-header .navbar-toggler {
     display: none;
   }
-  .navigation-bar .navbar-collapse {
+  .navbar-header .navbar-collapse {
     background-color: transparent;
     display: flex !important;
     flex-basis: auto;
     max-width: 80%;
   }
-  .navigation-bar .navbar-nav {
+  .navbar-header .navbar-nav {
     font-size: 0.93rem;
     font-family: 'Alata', sans-serif;
     flex-direction: row;

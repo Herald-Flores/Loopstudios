@@ -211,6 +211,9 @@ body.not-scroll {
   margin: 0;
   max-width: 210px;
   padding: 20px 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .btn-container {
@@ -382,6 +385,9 @@ body.not-scroll {
     letter-spacing: 1px;
     max-width: 255px;
     padding: 2rem 2.5rem;
+  }
+  #post-list .card-post-overlay:nth-of-type(4) .card-title {
+    max-width: 225px;
   }
 }
 /* End Media Query Desktop */

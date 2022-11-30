@@ -284,7 +284,7 @@ body.not-scroll {
 /* Media Query Desktop */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1110px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0;
   }
@@ -382,14 +382,6 @@ body.not-scroll {
     letter-spacing: 1px;
     max-width: 255px;
     padding: 2rem 2.5rem;
-  }
-}
-/* End Media Query Desktop */
-
-/* Media Query Desktop > 1440px */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
   }
 }
 /* End Media Query Desktop */

@@ -16,7 +16,7 @@
   padding-top: 8px;
 }
 
-.navbar-header {
+.main-header nav {
   height: 60px;
   width: 100%;
   max-width: 100%;
@@ -27,20 +27,20 @@
   align-items: center;
   padding: 5px 20px;
 }
-.navbar-header .container {
+.main-header nav .container {
   padding-top: 10px;
   justify-content: space-between;
 }
-.navbar-header .navbar-brand {
+.main-header nav .navbar-brand {
   display: flex;
   z-index: 4;
 }
 
-.navbar-header .navbar-toggler:hover,
-.navbar-header .navbar-toggler:focus {
+.main-header nav .navbar-toggler:hover,
+.main-header nav .navbar-toggler:focus {
   outline: none;
 }
-.navbar-header .navbar-toggler {
+.main-header nav .navbar-toggler {
   border: none;
   background-color: transparent;
   position: absolute;
@@ -53,7 +53,7 @@
   outline: none;
   margin-right: 8px;
 }
-.navbar-header .navbar-toggler span {
+.main-header nav .navbar-toggler span {
   content: '';
   background-color: var(--white);
   border-radius: 1px;
@@ -66,8 +66,8 @@
   width: 34px;
   right: 2px;
 }
-.navbar-header .navbar-toggler span:before,
-.navbar-header .navbar-toggler span:after {
+.main-header nav .navbar-toggler span:before,
+.main-header nav .navbar-toggler span:after {
   background-color: var(--white);
   border-radius: 1px;
   content: '';
@@ -79,37 +79,37 @@
     transform 0.2s linear;
   width: 34px;
 }
-.navbar-header .navbar-toggler span:before {
+.main-header nav .navbar-toggler span:before {
   top: 8px;
 }
-.navbar-header .navbar-toggler span:after {
+.main-header nav .navbar-toggler span:after {
   top: -8px;
 }
 
-.navbar-header .navbar-toggler.active span {
+.main-header nav .navbar-toggler.active span {
   background-color: transparent;
 }
-.navbar-header .navbar-toggler.active span:before,
-.navbar-header .navbar-toggler.active span:after {
+.main-header nav .navbar-toggler.active span:before,
+.main-header nav .navbar-toggler.active span:after {
   transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
 }
-.navbar-header .navbar-toggler.active span:before {
+.main-header nav .navbar-toggler.active span:before {
   top: 0;
   transform: rotate3d(0, 0, 1, -45deg);
 }
-.navbar-header .navbar-toggler.active span:after {
+.main-header nav .navbar-toggler.active span:after {
   top: 0;
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.navbar-header .navbar-collapse {
+.main-header nav .navbar-collapse {
   background-color: var(--black);
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
   z-index: 1;
 }
-.navbar-header .navbar-collapse.show {
+.main-header nav .navbar-collapse.show {
   height: 100vh;
   min-width: 100%;
   position: absolute;
@@ -121,10 +121,10 @@
   transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
     transform 0.2s linear;
 }
-.navbar-header .collapse:not(.show) {
+.main-header nav .collapse:not(.show) {
   display: none;
 }
-.navbar-header .navbar-nav {
+.main-header nav .navbar-nav {
   text-transform: uppercase;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
@@ -135,10 +135,10 @@
   padding-left: 15px;
   list-style: none;
 }
-.navbar-header .navbar-nav li {
+.main-header nav .navbar-nav li {
   margin-bottom: 30px;
 }
-.navbar-header .navbar-nav a {
+.main-header nav .navbar-nav a {
   color: var(--white);
   text-decoration: none;
   position: relative;
@@ -163,28 +163,28 @@ nav ul.navbar-nav a.active::before {
   .main-header {
     padding-top: 60px;
   }
-  .navbar-header .container {
+  .main-header nav .container {
     justify-content: space-between;
     gap: 20px;
   }
-  .navbar-header .navbar-brand {
+  .main-header nav .navbar-brand {
     display: block;
     margin-top: -3px;
     width: 192px;
   }
-  .navbar-header .navbar-brand img {
+  .main-header nav .navbar-brand img {
     width: 100%;
   }
-  .navbar-header .navbar-toggler {
+  .main-header nav .navbar-toggler {
     display: none;
   }
-  .navbar-header .navbar-collapse {
+  .main-header nav .navbar-collapse {
     background-color: transparent;
     display: flex !important;
     flex-basis: auto;
     max-width: 80%;
   }
-  .navbar-header .navbar-nav {
+  .main-header nav .navbar-nav {
     font-size: 0.93rem;
     font-family: 'Alata', sans-serif;
     flex-direction: row;
